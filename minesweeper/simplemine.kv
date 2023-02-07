@@ -1,0 +1,45 @@
+<LoginScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "5x5"
+            on_press: self.parent.parent.select_size(5, 5, 5)
+
+        Button:
+            text: "8x8"
+            on_press: self.parent.parent.select_size(8, 8, 20)
+        Button:
+            text: "16x16"
+            on_press: self.parent.parent.select_size(16, 16, 50)
+        Button:
+            text: "32x32"
+            on_press: self.parent.parent.select_size(32, 32, 100)
+
+
+
+<PlayGameScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            id: mine_layout
+            size_hint: 0.8, 1
+
+        BoxLayout:
+            Label:
+                text: "Count"
+            Label:
+                id: score_number
+                text: "0"
+            Button:
+                text: "Hello"
+        
+
+<BombPopup>:
+    auto_dismiss: False
+    title: "Bomb!!"
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text: "Your turn, gone!"
+        Button:
+            text: 'Close me!'
