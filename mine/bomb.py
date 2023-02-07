@@ -21,6 +21,6 @@ def random_bom(rows: int, cols: int, bom_number: int) -> list:
 
 
 if __name__ == "__main__":
-    mine = random_bom(5, 5, 10)
+    mine = random_bom(5, 5, 5)
     for row in mine:
         print(row)
